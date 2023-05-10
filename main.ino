@@ -4,8 +4,8 @@
 #include <ESP32Time.h>
 
 //Wifi Credentials.
-const char* ssid = "Three_61ED_EXT";
-const char* password = "+K8=3^rR8L";
+const char* ssid = "YOUR SSID";
+const char* password = "YOUR PASSWORD";
 //NTP Server settings (UK).
 const char* ntpServer = "pool.ntp.org";
 const long  gmtOffSet = 0;
