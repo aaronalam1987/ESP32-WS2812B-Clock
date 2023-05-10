@@ -26,4 +26,4 @@ The current day is represented from left to right as a value of 0-6.
 
 Using a simple switch case I have added an option to decreases brightness by a specified hour, this simply works by assigning an int a value to be used to divide the preset color values by evenly.
 
-![clock](https://github.com/aaronalam1987/ESP32-WS2812B-Clock/assets/46248931/8fb5cfb5-d5cc-4bc1-9cbe-7594cbe5d601 | width=250)
+![clock](https://github.com/aaronalam1987/ESP32-WS2812B-Clock/assets/46248931/8cc17dcc-958c-4669-be05-11c2cf97123f)
