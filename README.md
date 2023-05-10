@@ -7,16 +7,16 @@ On power up, a wifi connection is attempted and if successful, it pulls the curr
 
 I have arranged my LEDS vertically over 4 strips to represent the time and one horitonally across the bottom to display the current day value (1-7)
 
-     x   x
-     x   x
-     x   x
-     x   x
-     x x x
-     x x x
-     x x x
-   x x x x
-   x x x x
-x x x x x x x 
+         x   x
+         x   x
+         x   x
+         x   x
+         x x x
+         x x x
+         x x x
+       x x x x
+       x x x x
+     x x x x x x x 
 
 All leds are filled with a white value and the current digit is represented by a single colored led.
 
