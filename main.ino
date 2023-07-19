@@ -139,7 +139,6 @@ void setColorBrightness(){
       brightnessReduce = 16;
       break;
   }
-
   //Set color values divided by reduce amount.
   dayColor = Adafruit_NeoPixel::Color(204 / brightnessReduce, 51 / brightnessReduce, 0 / brightnessReduce);
   hrFirstColor = Adafruit_NeoPixel::Color(51 / brightnessReduce, 153 / brightnessReduce, 255 / brightnessReduce);
@@ -147,9 +146,11 @@ void setColorBrightness(){
   minFirstColor = Adafruit_NeoPixel::Color(204 / brightnessReduce, 0 / brightnessReduce, 204 / brightnessReduce);
   minSecondColor = Adafruit_NeoPixel::Color(255 / brightnessReduce, 153 / brightnessReduce, 0 / brightnessReduce);
   fillColor = Adafruit_NeoPixel::Color(255 / brightnessReduce, 255 / brightnessReduce, 255 / brightnessReduce);
+  //16 is maximum brightness reduction in my configuration and I prefer complete darkness in this range but, keeping the coloured hour and minutes.
+  if(brightnessReduce == 16){
+    fillColor = Adafruit_NeoPixel::Color(0, 0, 0);
+  }
 }
-
-
 
 void loop() {
   //If fullTime[0] contains no usable value, we either have not pulled data from NTP pool or something went wrong somehow.
@@ -157,7 +158,6 @@ void loop() {
   while(fullTime[0] == '\0'){
     doWiFi();
   }
-
   //Set color values based on brightnessReduce int.
   setColorBrightness();
   //fullTime[0] contains useable values, we can assume everything has gone as expected.
